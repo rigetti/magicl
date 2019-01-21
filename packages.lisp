@@ -86,6 +86,7 @@
            #:logm
            #:kron
            #:exptm
+           #:solve
            #:inc-matrix
            #:dec-matrix
            #:add-matrix
