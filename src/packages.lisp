@@ -17,6 +17,13 @@
    #:define-backend-function
    #:define-backend-implementation))
 
+(defpackage #:magicl.foreign-libraries
+  (:use #:common-lisp)
+  (:export #:*foreign-libraries*
+           #:track-symbols              ; used in MAGICL-GEN
+           #:foreign-symbol-available-p
+           #:print-availability-report))
+
 (defpackage #:magicl
   (:use #:common-lisp
         #:abstract-classes)
@@ -162,11 +169,13 @@
            #:inv
            #:lu
            #:csd
+           #:csd-blocks
            #:svd
            #:ql
            #:qr
            #:rq
            #:lq
+           #:expi
            #:expm
            #:logm
 
